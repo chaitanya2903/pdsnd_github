@@ -18,7 +18,8 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city = input("Enter city name: ").lower()
+    city = input("Enter city name: ")
+    city = city.lower()
 
     # TO DO: get user input for month (all, january, february, ... , june)
     month = input("Enter month: ")
@@ -159,6 +160,7 @@ def main():
             elif x == 'y' or x =='Y':
                 li = list(range(start_row,start_row+5))
                 z = json.loads(df.iloc[li].to_json())
+		print("Individual Data:")
                 print(json.dumps(z,indent = 2))
                 start_row += 5
                 
