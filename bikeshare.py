@@ -158,6 +158,7 @@ def main():
             elif x == 'y' or x =='Y':
                 li = list(range(start_row,start_row+5))
                 z = json.loads(df.iloc[li].to_json())
+		print("Individual Data:")
                 print(json.dumps(z,indent = 2))
                 start_row += 5
                 
