@@ -143,6 +143,7 @@ def user_stats(df):
 def main():
     while True:
         city, month, day = get_filters()
+	#Call the load_data() functions
         df = load_data(city, month, day)
 
         time_stats(df)
@@ -150,6 +151,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         start_row = 0
+	#Loop runs until user wants to see individual data. Loop stops once user enters no.  
         while True:
             x = input("Would you like to see individual data?\nEnter y if yes, else enter n:")
             if x == 'n' or x == 'N':
